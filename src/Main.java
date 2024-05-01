@@ -1,5 +1,4 @@
-import jdk.jshell.execution.StreamingExecutionControl;
-
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -35,6 +34,7 @@ public class Main {
         while (ciclo <= veces) {
             System.out.print("Ingresa nota " + ciclo + " : ");
             Scanner keyboard = new Scanner(System.in);
+            keyboard.useLocale(Locale.ENGLISH);
             numero = keyboard.nextDouble();
             sumatoria = sumatoria + numero;
             ciclo++;

@@ -28,9 +28,7 @@ El programa hace una series de calculos e impresiones asi:
   Ingresa nota 4 : 5
   Ingresa nota 5 : 5
   Promedio 4.4
-  Si digita numeros decimales, coloque 4,5, en vez 4.5. (en vez de punto coloque coma)
-  dependiendo de la configuracion regional de su equipo, para el punto decimal
-
+  
 8) para descargar el proyecto lo hace en:
    https://github.com/ravila64/alura-inmersion-java.git
    busca boton CODE. y dentro de las opciones DOWNLOAD ZIP
