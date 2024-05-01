@@ -1,5 +1,5 @@
 # proyecto con las siguientes caracteristicas para inmersion java
-El programa hace una series de calculos e impresion asi:
+El programa hace una series de calculos e impresiones asi:
 1) Muestra en pantalla dos mensajes.
    Ej. Bienvenido a la inmersion de java Y Película Matrix
 3) hace una incializacion de variables, enteras, double (reales o numeros decimales),
@@ -18,7 +18,7 @@ El programa hace una series de calculos e impresion asi:
    Pelicula antigua, muy buena  (aqui pregunta si año es menor a 2020)
    muestra en pantalla, "Pelicula antigua, muy buena"., ya que el año inicial es 1999
    
-8) Despues inicializa, 3 variables para leer 5 notas de calificacion de esta pelicula
+7) Despues inicializa, 3 variables para leer 5 notas de calificacion de esta pelicula
    con un ciclo while. Variables sumatoria, ciclo y veces, ademas variable numero para capturar
    la nota.
   Despues de imprime el promedio, quedando asi:
@@ -29,9 +29,9 @@ El programa hace una series de calculos e impresion asi:
   Ingresa nota 5 : 5
   Promedio 4.4
   Si digita numeros decimales, coloque 4,5, en vez 4.5. (en vez de punto coloque coma)
-  dependiendo de la configuracion regional de su equipo.
+  dependiendo de la configuracion regional de su equipo, para el punto decimal
 
-10) para descargar el proyecto lo hace en:
+8) para descargar el proyecto lo hace en:
    https://github.com/ravila64/alura-inmersion-java.git
    busca boton CODE. y dentro de las opciones DOWNLOAD ZIP
    o buscar teoria de git, con la opcion clone. Desde una terminal.   
