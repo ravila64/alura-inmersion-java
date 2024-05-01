@@ -20,7 +20,7 @@ public class Main {
         double media = (4.5 + 50. + 3.5) / 3;
         System.out.println("Año pelicula " + anio);
         System.out.println("Evaluacion   " + evaluacion);
-        System.out.println("Esta incluido en el plan " + estasInlcuidoEnPlan);
+        System.out.println("Esta incluido en el plan " + (estasInlcuidoEnPlan ? "verdadero ": "falso"));
         System.out.println("Nombre      " + nombre);
         System.out.println("Resumen     " + sinopsis);
         System.out.println("Calculo media es " + media);
