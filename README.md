@@ -7,7 +7,7 @@ El programa hace una series de calculos e impresiones asi:
 4) Inicializa unas variables cadena o String, en una linea y en varias lineas,
    ejemplo. nombre y sinopsis
 5) hace calculo de la media de 3 numeros en una variable real
-6) Imprime las diferentes variables inializadas anteriormente, con el texto asociado
+6) Imprime las diferentes variables inicializadas anteriormente, con el texto asociado
   Año pelicula 1999
   Evaluacion   5.0
   Esta incluido en el plan true
@@ -16,11 +16,12 @@ El programa hace una series de calculos e impresiones asi:
               texto en mas de 2 lineas
    calculo media es 19.333333333333332
    Pelicula antigua, muy buena  (aqui pregunta si año es menor a 2020)
-   muestra en pantalla, "Pelicula antigua, muy buena"., ya que el año inicial es 1999
+   muestra en pantalla, "Pelicula antigua, muy buena"., ya que el año inicial es 1999.
    
 7) Despues inicializa, 3 variables para leer 5 notas de calificacion de esta pelicula
    con un ciclo while. Variables sumatoria, ciclo y veces, ademas variable numero para capturar
-   la nota.
+   la nota. Ejecute en el icono triangulo de Intellij IDEA, y vera las respuestas, y capture las
+   5 notas que esta pidiendo. 
   Despues de imprime el promedio, quedando asi:
   Ingresa nota 1 : 5
   Ingresa nota 2 : 4
@@ -29,7 +30,7 @@ El programa hace una series de calculos e impresiones asi:
   Ingresa nota 5 : 5
   Promedio 4.4
   
-8) para descargar el proyecto lo hace en:
+9) para descargar el proyecto lo hace en:
    https://github.com/ravila64/alura-inmersion-java.git
    busca boton CODE. y dentro de las opciones DOWNLOAD ZIP
    o buscar teoria de git, con la opcion clone. Desde una terminal.   
