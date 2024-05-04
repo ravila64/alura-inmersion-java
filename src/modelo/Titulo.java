@@ -49,11 +49,10 @@ public class Titulo {
 
     public void mostrarFichaTecnica(){
         System.out.println("FICHA TECNICA");
-        System.out.println("Titulo      "+nombre);
-        System.out.println("Duracion en minutos "+tiempoDuracioMin);
-        System.out.println("Fecha lanzamiento "+fechaLanzamiento+ " minutos");
+        System.out.println("Nombre del Titulo   "+nombre);
+        System.out.println("Fecha lanzamiento "+fechaLanzamiento);
+        System.out.println("Duracion en minutos "+getTiempoDuracioMin() + " minutos");
     }
-
 
 }
 
