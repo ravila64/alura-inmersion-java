@@ -6,7 +6,7 @@ public class Serie extends Titulo{
     private int duracionMinPorEpisodio;
 
     @Override  // sobreescritura de metodo
-    public int getTiempoDuracioMin() {
+    public int getTiempoDuracionMinutos() {
        //   return super.getTiempoDuracioMin();
         int duracion = duracionMinPorEpisodio * episodioPorTemporada * temporada;
       return duracion;
@@ -35,5 +35,14 @@ public class Serie extends Titulo{
 
     public void setDuracionMinPorEpidosio(int duracionMinPorEpidosio) {
         this.duracionMinPorEpisodio = duracionMinPorEpidosio;
+    }
+
+    @Override
+    public String toString() {
+        return "Serie{" +
+                "temporada=" + temporada +
+                ", episodios Por Temporada=" + episodioPorTemporada +
+                ", duracion Minutos Por Episodio=" + duracionMinPorEpisodio +
+                '}';
     }
 }

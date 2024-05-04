@@ -5,71 +5,94 @@ import java.util.Scanner;
       int opc=0;
       Scanner  teclado = new Scanner(System.in);
 
-    private void leerDatos(String tipo){
-        System.out.print("Titulo "+tipo+" :");
+    private String leerNombre(String texto){
+        System.out.print("Titulo[nombre] "+texto+" :");
         String nombre =  teclado.nextLine();
-        System.out.print("Año lanzamiento "+tipo);
-        int fechaLanzamiento = teclado.nextInt();
-        teclado.nextLine();
+        return nombre;
     }
-    private void capturaNuevaPelicula(){
-        leerDatos("Pelicula");
-        System.out.print("Duracion : ");
-        int duracionEnMin = teclado.nextInt();
+    private int leerAñoLanzamiento(String texto){
+        System.out.print("Año lanzamiento "+texto+ " :");
+        int año = teclado.nextInt();
         teclado.nextLine();
-        System.out.println("Director : ");
+        return año;
+    }
+    private int leerDuracion(String texto){
+        System.out.print("Duracion "+texto+" en minutos :");
+        int duracion = teclado.nextInt();
+        teclado.nextLine();
+        return duracion;
+    }
+    private String leerDirector(){
+        System.out.print("Director película: ");
         String director = teclado.nextLine();
         System.out.println("");
+        return director;
+    }
+    private int leerCantidadCapitulos(){
+        System.out.print("Cantidad de capitulos por temporada ");
+        int capitulos = teclado.nextInt();
+        teclado.nextLine();
+        return capitulos;
+    }
+    private  int leerCantidadTemporadas(){
+        System.out.print("Cantidad de temporadas");
+        int cantTemporadas = teclado.nextInt();
+        teclado.nextLine();
+        return cantTemporadas;
+    }
+    private String leerSinopsis(){
+        System.out.println("Sinopsis de la serie ");
+        String sinopsis = teclado.nextLine();
+        return  sinopsis;
+    }
+
+    private void menu(){
+        String[] items= {"=====MENU=====","1. Registrar nueva pelicula","2. Registar nueva Serie",
+                "3. Maraton de peliculas ", "9. Salir","Digite Opcion del [1..9]" };
+        for (int i = 0; i < items.length; i++) {
+            System.out.println(items[i]);
+        }
+    }
+
+    private void capturaNuevaPelicula(){
+        String nombre = leerNombre("Pelicula");
+        int fechaLanzamiento=leerAñoLanzamiento("Pelicula");
+        int duracionEnMin=leerDuracion("Pelicula");
+        String director = leerDirector();
+        // grabacion de datos
         Pelicula pelicula = new Pelicula();
         pelicula.setNombre(nombre);
         pelicula.setFechaLanzamiento(fechaLanzamiento);
-        pelicula.setTiempoDuracioMin(duracionEnMin);
+        pelicula.setTiempoDuracionMinutos(duracionEnMin);
         pelicula.setDirector(director);
-        pelicula.mostrarFichaTecnica();
+        // mostrar datos pantalla
+        pelicula.mostrarFichaTecnica("Pelicula");
         System.out.println("Director "+pelicula.toString());
     }
     private void capturaNuevaSerie(){
-        System.out.print("Nombre de la serie");
-        String nombreSerie = teclado.nextLine();
-        System.out.print("Año de lanzamiento de la serie");
-        int fechaLanzamientoSerie = teclado.nextInt();
-        teclado.nextLine();
-        System.out.print("El tiempo duración minutos por capitulo ");
-        int tiempoDuracionMinCapitulo = teclado.nextInt();
-        teclado.nextLine();
-        System.out.print("Cantidad de capitulos por temporada ");
-        int capitulosSerie = teclado.nextInt();
-        teclado.nextLine();
-        System.out.print("Cantidad de temporadas");
-        int cantTemporadasSerie = teclado.nextInt();
-        teclado.nextLine();
-        System.out.print("Sinopsis de la serie");
-        String sinopsisSerie = teclado.nextLine();
-        System.out.println("");
+        String nombre = leerNombre("Serie");
+        int fechaLanzamiento=leerAñoLanzamiento("Serie");
+        int duracionEnMin=leerDuracion("Serie");
+        int capitulosSerie = leerCantidadCapitulos();
+        int cantTemporadasSerie = leerCantidadTemporadas();
+        String sinopsisSerie = leerSinopsis();
+        // grabacion de datos
         Serie serie = new Serie();
-        serie.setNombre(nombreSerie);
-        serie.setFechaLanzamiento(fechaLanzamientoSerie);
+        serie.setNombre(nombre);
+        serie.setFechaLanzamiento(fechaLanzamiento);
         serie.setEpisodioPorTemporada(capitulosSerie);
-        serie.setDuracionMinPorEpidosio(tiempoDuracionMinCapitulo);
+        serie.setDuracionMinPorEpidosio(duracionEnMin);
         serie.setTemporada(cantTemporadasSerie);
         serie.setSinopsis(sinopsisSerie);
-        serie.mostrarFichaTecnica();
+        // mostrar resultados pantalla
+        serie.mostrarFichaTecnica("Serie");
+        System.out.println(serie.toString());
     }
-      public void menu(){
-        String menu = """
-                    ====Bienvenido a Screen Match====
-                    1) Registrar nueva pelicula 
-                    2) Registar nueva Serie
-                    3) Maraton de peliculas
-                    
-                    9) Salir
-                    Digite Opcion del [1..9]
-                    """;
-        System.out.println(menu);
+    private void maratonDePeliculas(){
+        System.out.println("En construccion");
     }
+
     public void leerOpcion() {
-
-
         while(opc!=9){
             menu();
             opc = teclado.nextInt();
@@ -83,13 +106,16 @@ import java.util.Scanner;
                     capturaNuevaSerie();
                     break;
                 }
+                case 3:{
+                    maratonDePeliculas();
+                    break;
+                }
                 case 9:
                     System.out.println("Saliendo del programa");
                     break;
                 default:
                     System.out.println("Opcion no valida");
                     break;
-
             }
         }
     }

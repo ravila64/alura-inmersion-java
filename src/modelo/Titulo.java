@@ -6,7 +6,7 @@ public class Titulo {
     private double evaluacion;
     private boolean incluyePlanBasico;
     private String sinopsis;
-    private int tiempoDuracioMin;
+    private int tiempoDuracionMinutos;
 
     // getters and setters
 
@@ -39,20 +39,19 @@ public class Titulo {
         this.sinopsis = sinopsis;
     }
 
-    public int getTiempoDuracioMin() {
-        return tiempoDuracioMin;
+    public int getTiempoDuracionMinutos() {
+        return tiempoDuracionMinutos;
     }
 
-    public void setTiempoDuracioMin(int tiempoDuracioMin) {
-        this.tiempoDuracioMin = tiempoDuracioMin;
+    public void setTiempoDuracionMinutos(int tiempoDuracionMinutos) {
+        this.tiempoDuracionMinutos = tiempoDuracionMinutos;
     }
 
-    public void mostrarFichaTecnica(){
-        System.out.println("FICHA TECNICA");
-        System.out.println("Nombre del Titulo   "+nombre);
-        System.out.println("Fecha lanzamiento "+fechaLanzamiento);
-        System.out.println("Duracion en minutos "+getTiempoDuracioMin() + " minutos");
+    public void mostrarFichaTecnica(String texto){
+        System.out.println("FICHA TECNICA "+texto);
+        System.out.println("Nombre o Titulo "+texto+" : "+nombre);
+        System.out.println("Fecha lanzamiento "+texto+" :"+fechaLanzamiento);
+        System.out.println("Duracion en minutos "+texto+" :"+getTiempoDuracionMinutos() + " minutos");
     }
-
 }
 
