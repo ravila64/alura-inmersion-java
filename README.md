@@ -1,36 +1,62 @@
-# proyecto con las siguientes caracteristicas para inmersion java
-El programa hace una series de calculos e impresiones asi:
-1) Muestra en pantalla dos mensajes.
-   Ej. Bienvenido a la inmersion de java Y Película Matrix
-3) hace una incializacion de variables, enteras, double (reales o numeros decimales),
-   y una variable boleana
-4) Inicializa unas variables cadena o String, en una linea y en varias lineas,
-   ejemplo. nombre y sinopsis
-5) hace calculo de la media de 3 numeros en una variable real
-6) Imprime las diferentes variables inicializadas anteriormente, con el texto asociado
-  Año pelicula 1999
-  Evaluacion   5.0
-  Esta incluido en el plan true
-  Nombre      Rene Avila Alonso
-  Resumen     this movie is very good
-              texto en mas de 2 lineas
-   calculo media es 19.333333333333332
-   Pelicula antigua, muy buena  (aqui pregunta si año es menor a 2020)
-   muestra en pantalla, "Pelicula antigua, muy buena"., ya que el año inicial es 1999.
-   
-7) Despues inicializa, 3 variables para leer 5 notas de calificacion de esta pelicula
-   con un ciclo while. Variables sumatoria, ciclo y veces, ademas variable numero para capturar
-   la nota. Ejecute en el icono triangulo de Intellij IDEA, y vera las respuestas, y capture las
-   5 notas que esta pidiendo. 
-  Despues de imprime el promedio, quedando asi:
-  Ingresa nota 1 : 5
-  Ingresa nota 2 : 4
-  Ingresa nota 3 : 3
-  Ingresa nota 4 : 5
-  Ingresa nota 5 : 5
-  Promedio 4.4
-  
-9) para descargar el proyecto lo hace en:
-   https://github.com/ravila64/alura-inmersion-java.git
-   busca boton CODE. y dentro de las opciones DOWNLOAD ZIP
-   o buscar teoria de git, con la opcion clone. Desde una terminal.   
+# proyecto con las siguientes caracteristicas para inmersion java, clase 2
+El programa hace lo siguiente:
+
+a. Muestra un menu principal.
+
+=====MENU=====
+1. Registrar nueva pelicula
+2. Registar nueva Serie
+3. Maraton de peliculas
+9. Salir
+
+    Digite Opcion del [1..9]
+
+b. Selecciona la opcion del 1 al 3, y puede capturar informacion de una pelicula con opcion 1
+    
+* Titulo[nombre] Pelicula :El metodo
+* Año lanzamiento Pelicula :2005
+* Duracion Pelicula en minutos :117
+* Director película: Marcelo Piñeyro
+
+c. imprimirá la ficha tecnica
+
+====================================================
+- FICHA TECNICA PELICULA
+- Nombre o Titulo Pelicula : El metodo
+- Fecha lanzamiento Pelicula :2005
+- Duracion en minutos Pelicula :117 minutos
+- ====================================================
+
+d. si selecciona opcion 2.
+
+- Titulo[nombre] Serie :Dallas
+- Año lanzamiento Serie :1978
+- Duracion Serie en minutos :60
+- Cantidad de capitulos por temporada 30
+- Cantidad de temporadas 14
+- Sinopsis de la serie excelente
+- 
+====================================================
+- FICHA TECNICA SERIE
+- Nombre o Titulo Serie : Dallas
+- Fecha lanzamiento Serie :1978
+- Duracion en minutos Serie :25200 minutos
+- ====================================================
+- Serie{temporada=14, episodios Por Temporada=30, duracion Minutos Por Episodio=60}
+
+e. Si digita opcion 3.
+
+* Cuantas peliculas vera en la maratón 2
+* Titulo[nombre] Pelicula 1 : :pacto de silencio
+* Duracion Pelicula 1 : en minutos :120
+* Titulo[nombre] Pelicula 2 : :la ley de los audaces
+* Duracion Pelicula 2 : en minutos :45
+* TIEMPO MARATON
+* Durara la maraton  2 Horas y 45 Minutos
+
+f) opcion 9) salir
+
+g) para descargar el proyecto lo hace en:
+   https://github.com/ravila64/alura-inmersion-java/tree/aula-01
+
+Mayo 04, 2024
