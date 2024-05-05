@@ -35,15 +35,22 @@ import java.util.Scanner;
         return capitulos;
     }
     private  int leerCantidadTemporadas(){
-        System.out.print("Cantidad de temporadas");
+        System.out.print("Cantidad de temporadas ");
         int cantTemporadas = teclado.nextInt();
         teclado.nextLine();
         return cantTemporadas;
     }
     private String leerSinopsis(){
-        System.out.println("Sinopsis de la serie ");
+        System.out.print("Sinopsis de la serie ");
         String sinopsis = teclado.nextLine();
         return  sinopsis;
+    }
+
+    private int leerCantidadPeliculas(){
+        System.out.print("Cuantas peliculas vera en la maratón ");
+        int cantidad = teclado.nextInt();
+        teclado.nextLine();
+        return cantidad;
     }
 
     private void menu(){
@@ -88,8 +95,24 @@ import java.util.Scanner;
         serie.mostrarFichaTecnica("Serie");
         System.out.println(serie.toString());
     }
+
+    private void muestraTiempoMaraton(int horas, int minutos){
+        System.out.println("TIEMPO MARATON");
+        System.out.println("Durara la maraton  "+horas+" Horas y "+minutos+ " Minutos");
+    }
+
     private void maratonDePeliculas(){
-        System.out.println("En construccion");
+        int tiempoMaraton = 0;
+        int horas, minutos;
+        int cantidadPeliculas = leerCantidadPeliculas();
+        for (int i = 0; i < cantidadPeliculas; i++) {
+            String nombre = leerNombre("Pelicula "+(i+1)+" :");
+            int duracionEnMin=leerDuracion("Pelicula "+(i+1)+" :");
+            tiempoMaraton = tiempoMaraton + duracionEnMin;
+        }
+        horas = tiempoMaraton / 60;
+        minutos = tiempoMaraton % 60;
+        muestraTiempoMaraton(horas, minutos);
     }
 
     public void leerOpcion() {

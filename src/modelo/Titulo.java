@@ -48,10 +48,12 @@ public class Titulo {
     }
 
     public void mostrarFichaTecnica(String texto){
-        System.out.println("FICHA TECNICA "+texto);
+        System.out.println("====================================================");
+        System.out.println("FICHA TECNICA "+texto.toUpperCase());
         System.out.println("Nombre o Titulo "+texto+" : "+nombre);
         System.out.println("Fecha lanzamiento "+texto+" :"+fechaLanzamiento);
         System.out.println("Duracion en minutos "+texto+" :"+getTiempoDuracionMinutos() + " minutos");
+        System.out.println("====================================================");
     }
 }
 
